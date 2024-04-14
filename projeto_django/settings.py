@@ -27,6 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'index',
+    'link_referente_cadastro',
+    'link_referente_produto',
+
 
 ]
 
