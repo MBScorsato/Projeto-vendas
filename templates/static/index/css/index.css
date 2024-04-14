@@ -1,3 +1,9 @@
 p{
     color: blue;
 }
+
+.imagem-logo {
+        border-radius: 0%;
+        width: 100%; /* ou width: 50vw; */
+        height: auto; /* Isso mantém a proporção original da imagem */
+    }

@@ -25,3 +25,15 @@ class NavBar_Links(models.Model):
 
     class Meta:
         verbose_name_plural = "Defenir nomes dos links"
+
+
+class Apresentaca_Site(models.Model):
+    titulo = models.CharField(max_length=50)
+    arq = models.FileField(upload_to="img")
+    descricao = models.TextField()
+
+    class Meta:
+        verbose_name = "Imagem principal do Site (Logotipo da Empresa)"
+
+    class Meta:
+        verbose_name_plural = "Imagem principal do Site (Logotipo da Empresa)"

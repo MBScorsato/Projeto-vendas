@@ -1,28 +1,31 @@
 {% extends 'bootstrap_navbar.html' %}
 {% load static %}
+
 {% block head %}
     <link rel="stylesheet" href="{% static 'index/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap_navbar/css/bootstrap_navbar.css' %}">
-
-
 {% endblock %}
-{% block title %}nome login ou padrão{% endblock %}
+
+{% block title %}
+    nome login ou padrão
+{% endblock %}
+
 {% block body %}
-
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Coluna 1</h2>
-        <p>Conteúdo da coluna 1</p>
-      </div>
-
-      <div class="col-md-6">
-        <h2>Coluna 2</h2>
-        <p>Conteúdo da coluna 2 aqui.</p>
-      </div>
+<div class="container">
+    <div class="card mb-3">
+        <img src="{{ apresenta_site_arq.url }}" alt="{{ imagem_do_produto }}" class="imagem-logo">
+        <div class="card-body">
+            <h5 class="card-title">{{ apresenta_site_titulo }}</h5>
+            <p class="card-text">{{ apresenta_site_descricao }}</p>
+        </div>
     </div>
 
-  </div>
-
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Coluna 2</h2>
+            <p>Conteúdo da coluna 2 aqui.</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
+
