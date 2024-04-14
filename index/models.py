@@ -12,3 +12,16 @@ class bootstrap_navbar(models.Model):
 
     class Meta:
         verbose_name_plural = "Nome site"
+
+
+class NavBar_Links(models.Model):
+    link_referente_cadastro = models.CharField(max_length=50)
+    link_referente_produto = models.CharField(max_length=50)
+    link_referente_receita = models.CharField(max_length=50)
+    link_referente_cliente = models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name = "Defenir nomes dos links"
+
+    class Meta:
+        verbose_name_plural = "Defenir nomes dos links"

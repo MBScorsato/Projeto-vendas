@@ -8,19 +8,23 @@
 {% block title %}{% endblock %}
 
 {% block navbar %}
-<nav class="navbar navbar-expand-lg" style="background-color: hotpink;">
+
+<nav class="navbar navbar-expand-lg" style="background-color: orange">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'index' %}"><label class="nome-da-pagina">{{ ultimo_objeto_salvo }}</label></a>
+    <a class="navbar-brand" href="{% url 'index' %}"><label class="nome-da-pagina">{{ nome_do_site }}</label></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup"><hr>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <hr>
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Início</a>
-        <a class="nav-link" href="#"><label class="link-cadastre-se">Porque devo me cadastrar?</label></a>
-        <a class="nav-link" href="#"><label class="link1">Bolos</label></a>
-        <a class="nav-link" href="#"><label class="link2">Clientes</label></a>
-        <a class="nav-link" href="#"><label class="link3">Receitas</label></a>
+        {% for link in liks %}
+          <a class="nav-link" href="#"><label class="link-cadastre-se">{{ link.link_referente_cadastro }}</label></a>
+          <a class="nav-link" href="#"><label class="link1">{{ link.link_referente_produto }}</label></a>
+          <a class="nav-link" href="#"><label class="link2">{{ link.link_referente_receita }}</label></a>
+          <a class="nav-link" href="#"><label class="link3">{{ link.link_referente_cliente }}</label></a>
+        {% endfor %}
       </div>
     </div>
   </div>
