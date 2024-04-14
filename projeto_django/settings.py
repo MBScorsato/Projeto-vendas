@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'index',
     'link_referente_cadastro',
     'link_referente_produto',
-
+    'link_referente_receita',
+    'link_referente_cliente',
 
 ]
 

@@ -20,10 +20,10 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Início</a>
         {% for link in liks %}
-          <a class="nav-link" href="#"><label class="link-cadastre-se">{{ link.link_referente_cadastro }}</label></a>
-          <a class="nav-link" href="#"><label class="link1">{{ link.link_referente_produto }}</label></a>
-          <a class="nav-link" href="#"><label class="link2">{{ link.link_referente_receita }}</label></a>
-          <a class="nav-link" href="#"><label class="link3">{{ link.link_referente_cliente }}</label></a>
+          <a class="nav-link" href="{% url 'link_referente_cadastro' %}"><label class="link-cadastre-se">{{ link.link_referente_cadastro }}</label></a>
+          <a class="nav-link" href="{% url 'link_referente_produto' %}"><label class="link1">{{ link.link_referente_produto }}</label></a>
+          <a class="nav-link" href="{% url 'link_referente_receita' %}"><label class="link2">{{ link.link_referente_receita }}</label></a>
+          <a class="nav-link" href="{% url 'link_referente_cliente' %}"><label class="link3">{{ link.link_referente_cliente }}</label></a>
         {% endfor %}
       </div>
     </div>
