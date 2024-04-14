@@ -1,3 +1,4 @@
 from django.contrib import admin
+from index.models import bootstrap_navbar
 
-# Register your models here.
+admin.site.register(bootstrap_navbar)
